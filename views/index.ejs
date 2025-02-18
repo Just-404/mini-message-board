@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message board</title>
+</head>
+<body>
+    <h1><%= title%></h1>
+    <ul>
+        <% messages.forEach(msg => { %>
+            <li> <%= msg.user %> says <%= msg.text%> on <%= msg.added.toString() %> 
+                <a href="/<%= msg.id%>/details">View details</a> 
+            </li>
+        <% }) %>
+    </ul>
+    <p><a href="/new">Send message!</a></p>
+</body>
+</html>
